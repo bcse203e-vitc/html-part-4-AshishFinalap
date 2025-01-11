@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <form action="toto" method="post">
+        <!-- name -->
+        <label for="Name">Name</label> <br>
+        <input type="text" name="Name" id="Name" placeholder="Name"><br><br>
+        <!-- email -->
+        <label for="email">Email</label> <br>
+        <input type="email" name="email" placeholder="abc@gmail.com" required"> <br><br>
+        <!-- rate the website -->
+        <label for="rtw">Rate The Website</label> <br>
+        <input type="radio" value="Male" name="rtw"> ⭐ <br>
+        <input type="radio" value="Female" name="rtw">⭐⭐<br>
+        <input type="radio" value="Others" name="rtw">⭐⭐⭐<br>
+        <input type="radio" value="Others" name="rtw">⭐⭐⭐⭐<br>
+        <input type="radio" value="Others" name="rtw">⭐⭐⭐⭐⭐<br>
+        <!-- feedback -->
+        <label for="feedback">Feedback</label>
+        <textarea name="feedback" id="feedback"></textarea><br>
+        <!-- dropdown menu -->
+        <label for="dropdown">Dropdown Menu:</label>
+        
+        <select name="dropdown" id="dropdown">
+            <option value="Suggestion">Suggestion</option>
+            <option value="Bug Report">Bug Report</option>
+            <option value="Compliment">Compliment</option>
+        </select><br><br>
+        <!-- recommendation -->
+         <label for="ques">Would you recommend this to us?</label><br>
+         <input type="radio" name="ques" id="ques" value="Yes">Yes <br>
+         <input type="radio" name="ques" id="ques" value="No">No <br>
+        <!-- button -->
+         <button type="submit">submit</button>
+         <button type="reset">reset</button>
+    </form>
+</body>
+</html>

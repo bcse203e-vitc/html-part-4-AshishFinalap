@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Submission Form</title>
+</head>
+<body>
+    <h1>Online Quiz Submission</h1>
+    <form action="/submit-quiz" method="post">
+
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" placeholder="example@domain.com"><br><br>
+        
+
+        <label>Question 1: What is the capital of INDIA?</label><br>
+        <input type="radio" id="delhi" name="q1" value="Delhi" required>
+        <label for="paris">Delhi</label><br>
+        <input type="radio" id="Vadodara" name="q1" value="Vadodara">
+        <label for="rome">Vadodara</label><br>
+        <input type="radio" id="srinagar" name="q1" value="Srinagar">
+        <label for="madrid">Srinagar</label><br><br>
+
+        <label>Question 2: Select the programming languages you know:</label><br>
+        <input type="checkbox" id="python" name="q2" value="Python">
+        <label for="python">Python</label><br>
+        <input type="checkbox" id="java" name="q2" value="Java">
+        <label for="java">Java</label><br>
+        <input type="checkbox" id="javascript" name="q2" value="JavaScript">
+        <label for="javascript">JavaScript</label><br><br>
+
+        <label for="timer">Time Remaining:</label><br>
+        <input type="text" id="timer" name="timer" placeholder="00:00" readonly><br><br>
+        
+
+        <button type="submit">Submit Quiz</button>
+    </form>
+</body>
+</html>

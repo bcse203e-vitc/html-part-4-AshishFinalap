@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Form</title>
+</head>
+<body>
+    <h1>Hotel Booking</h1>
+    <form action="/submit-booking" method="post">
+        
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="contact">Contact Info:</label><br>
+        <input type="email" id="contact" name="contact" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" placeholder="example@Gmail.com"><br><br>
+        
+        <label for="check-in">Check-in Date:</label><br>
+        <input type="date" id="check-in" name="check-in" required><br><br>
+        
+        <label for="check-out">Check-out Date:</label><br>
+        <input type="date" id="check-out" name="check-out" required><br><br>
+        
+        <label for="guests">Number of Guests:</label><br>
+        <input type="number" id="guests" name="guests" min="1" required value="1"><br><br>
+        
+        <label for="room-type">Room Type:</label><br>
+        <select id="room-type" name="room-type" required>
+            <option value="">Select a room type</option>
+            <option value="single">Single</option>
+            <option value="double">Double</option>
+            <option value="suite">Suite</option>
+        </select><br><br>
+        
+        <label>Additional Services:</label><br>
+        <input type="checkbox" id="breakfast" name="services" value="breakfast">
+        <label for="breakfast">Breakfast</label><br>
+        <input type="checkbox" id="pickup" name="services" value="pickup">
+        <label for="pickup">Airport Pickup</label><br><br>
+        
+        <label for="total-cost">Total Cost:</label><br>
+        <input type="text" id="total-cost" name="total-cost" placeholder="Calculate manually" readonly><br><br>
+        
+        
+        <button type="submit">Submit Booking</button>
+    </form>
+</body>
+</html>
