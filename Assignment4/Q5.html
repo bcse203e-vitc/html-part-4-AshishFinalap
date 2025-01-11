@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Order Form</title>
+</head>
+<body>
+    <h1>Order Your Product</h1>
+    <form action="/submit-order" method="post">
+        <!-- Customer Name -->
+        <label for="name">Customer Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <!-- Email -->
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  placeholder="example@gmail.com"><br><br>
+        
+        <!-- Address -->
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address" required><br><br>
+        
+        <!-- Product Dropdown -->
+        <label for="product">Product:</label><br>
+        <select id="product" name="product" required>
+            <option value="">Select a product</option>
+            <option value="Product A">Product A - 100</option>
+            <option value="Product B">Product B - 200</option>
+            <option value="Product C">Product C - 300</option>
+        </select><br><br>
+        
+        <!-- Quantity -->
+        <label for="quantity">Quantity:</label><br>
+        <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+        
+        <!-- Delivery Preferences -->
+        <label>Delivery Preferences:</label><br>
+        <input type="radio" id="standard" name="delivery" value="standard" required>
+        <label for="standard">Standard</label><br>
+        <input type="radio" id="express" name="delivery" value="express">
+        <label for="express">Express</label><br><br>
+        
+        <!-- Apply Coupon Field -->
+        <label for="coupon">Apply Coupon:</label><br>
+        <input type="text" id="coupon" name="coupon" placeholder="Enter coupon code"><br><br>
+        
+        <!-- Total Price Display  -->
+        <label>Total Price:</label><br>
+        <span id="total-price">0</span><br><br>
+        
+        <!-- Submit Button -->
+        <button type="submit">Submit Order</button>
+    </form>
+</body>
+</html>
